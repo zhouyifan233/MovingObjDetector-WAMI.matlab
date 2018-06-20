@@ -10,9 +10,8 @@ channels = 3;
 subtraction_threshold = 8;
 
 winHeight = winSize*2+1;winWidth = winSize*2+1;winDim=[winHeight,winWidth,channels];
-load('E:\\WPAFB-Models\\Vehicle-Position-Regression\\model_position_winsize45.mat'); position_net = net;
-load('E:\\WPAFB-Models\\Vehicle-Position-Regression\\model_position_winsize51_singleframe.mat'); position_net51_single = net;
-load('E:\\WPAFB-Models\\Vehicle-Binary-Classifier\\model_winsize21_thres8.mat');
+load('data\\model_position_winsize51_singleframe.mat'); position_net51_single = net;
+load('data\\model_winsize21_thres8.mat');
 load(['data\\TransMatrices_train.mat']);
 load(['data\\Groundtruth_onlyMoving_train_speed_1.mat']);
 
