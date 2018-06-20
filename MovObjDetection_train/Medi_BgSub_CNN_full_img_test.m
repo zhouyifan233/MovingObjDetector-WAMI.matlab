@@ -2,7 +2,7 @@ clear
 tic
 global numTemplate height width startFrame
 
-testFrame = 20;
+testFrame = 6;
 startFrame = testFrame-3;    %77
 numTemplate = 3;
 winSize = 10;
@@ -15,12 +15,13 @@ load('data\\model_winsize21_thres8.mat');
 load(['data\\TransMatrices_train.mat']);
 load(['data\\Groundtruth_onlyMoving_train_speed_1.mat']);
 
-[templates, store_TransMatrix] = Initialisation(TransMatrix);
+imagepath = 'WPAFB-images\png\WAPAFB_images_train\';
+[templates, store_TransMatrix] = Initialisation(TransMatrix, imagepath);
 %% read in #6 and begin iteration
 
 %     Mat = TransMatrix{startFrame+numTemplate+inx-2};
 filename1 = sprintf('frame%06d.png', startFrame+numTemplate);
-imgray10 = imread(['E:\WPAFB-images\training\' filename1]);
+imgray10 = imread([imagepath filename1]);
 % imgray10 = imresize(imgray10, 0.75);
 [height, width] = size(imgray10);
 
