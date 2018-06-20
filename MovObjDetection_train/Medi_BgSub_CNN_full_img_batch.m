@@ -28,8 +28,6 @@ for inx = 1:10
     [height, width] = size(imgray10);
 
     [background, bgmodels, validArea] = CreateBackground(imgray10, templates, store_TransMatrix);
-
-%     [validArea] = GetValidArea(imgray10, bgmodels);
     
     Groundtruth = GetValidGroundTruth(pos_frame, startFrame+numTemplate-1+inx, gather(validArea));
 
@@ -39,8 +37,6 @@ for inx = 1:10
         [CNNDetections,stats_CNN,tmp_idx_map] = PerformCNNDetections(net,detection_centres,stats,imgray10,bgmodels,winSize,winDim);
         
         RefinedDetections = mergeDetections_singleframe(CNNDetections, stats_CNN, imgray10, position_net51_single);
-        
-%         RefinedDetections = mergeDetections(CNNDetections, stats_CNN, imgray10, bgmodels, position_net);
         
         [precision,recall] = GetPrecisionRecall(RefinedDetections,Groundtruth);
     else
