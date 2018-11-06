@@ -3,7 +3,7 @@ tic
 global numTemplate height width startFrame
 
 testFrame = 6;
-imagepath = 'WPAFB-images\png\WAPAFB_images_train\';
+imagepath = 'WPAFB-images/png/WAPAFB_images_train/training/';
 
 startFrame = testFrame-3;    %77
 numTemplate = 3;
@@ -12,10 +12,10 @@ channels = 3;
 subtraction_threshold = 8;
 
 winHeight = winSize*2+1;winWidth = winSize*2+1;winDim=[winHeight,winWidth,channels];
-load('data\\model_position_winsize51_singleframe.mat'); position_net51_single = net;
-load('data\\model_winsize21_thres8.mat');
-load(['data\\TransMatrices_train.mat']);
-load(['data\\Groundtruth_onlyMoving_train_speed_1.mat']);
+load('data/model_position_winsize51_singleframe.mat'); position_net51_single = net;
+load('data/model_winsize21_thres8.mat');
+load(['data/TransMatrices_train.mat']);
+load(['data/Groundtruth_onlyMoving_train_speed_1.mat']);
 
 [templates, store_TransMatrix] = Initialisation(TransMatrix, imagepath);
 %% read in #6 and begin iteration
