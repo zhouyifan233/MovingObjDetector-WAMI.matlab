@@ -3,8 +3,8 @@ clear
 global numTemplate height width
 
 %% Parameters
-image_folder = 'E:/WPAFB-images/testing/';
-% image_folder = 'WPAFB-images/png/test/';
+% image_folder = 'E:/WPAFB-images/testing/';
+image_folder = 'WPAFB-images/png/test/';
 AOI_id = '40';
 write_output_image = false;
 startFrame = 1;    %77
