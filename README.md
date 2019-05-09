@@ -7,7 +7,9 @@ Decompress WPAFB dataset under "WPAFB-images\ntf\"
 
 Run "WPAFB-images\nitf2png.m" to convert ntf images to png images.
 
-Run "Medi_BgSub_CNN_full_img_test.m" to test one frame.
+Run "run_area_of_interest_test_set.m" to process the experiments.
 
-Run "Medi_BgSub_CNN_full_img_batch.m" to process all frames.
+This code is the implementation for our accepted paper in 22nd International Conference on Information Fusion 2019. It should produce exact results as the paper. Python implementations will be released as well. 
+
+AOI_id can be "01, 02, 03, 34, 40, 41". Details can be found in the paper.
 
