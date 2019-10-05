@@ -1,7 +1,7 @@
 # Moving Object detection in Wide-Area Motion Imagery (matlab version)
 Moving object detection (vehicles) for WAMI images
 
-This code is the implementation for our paper which has been accpeted in 22nd International Conference on Information Fusion (FUSION) 2019. It should produce exact the same results as the paper.
+This code is the implementation for our paper, "Detecting and Tracking Small Moving Objects in Wide Area Motion Imagery (WAMI) Using Convolutional Neural Networks (CNNs)", which has been accpeted in 22nd International Conference on Information Fusion (FUSION) 2019. It should produce exact the same results as the paper.
 
 CNNs were trained using WPAFB dataset: https://www.sdms.afrl.af.mil/index.php?collection=wpafb2009
 This code aims for testing the algorithm on WPAFB2009 dataset (the testing set), but also works on other WAMI images/videos (a little modifications should be made).
